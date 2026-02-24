@@ -1,29 +1,23 @@
 import { motion } from "framer-motion";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-
-const faqs = [
-  {
-    q: "What types of scrap do you buy?",
-    a: "We buy a wide variety of scrap, including all types of metals (iron, steel, copper, aluminum, brass), e-waste (computers, TVs, refrigerators), old vehicles and parts, industrial machinery, batteries, plastics, and cardboard. If you're unsure, please call us!"
-  },
-  {
-    q: "Which areas in Phnom Penh do you serve?",
-    a: "We offer free scrap pickup services across all 14 Khans (districts) of Phnom Penh. Whether you are in Daun Penh, Tuol Kouk, Meanchey, or any other district, our team can come to your location."
-  },
-  {
-    q: "How do I get the best price for my scrap?",
-    a: "To get the best price, it helps to separate your materials (e.g., keep aluminum separate from steel). The price of scrap changes with the market, but we always offer the most competitive rates. For a large quantity, please call us directly for a custom quote."
-  },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const FAQSection = () => {
+  const { t } = useLanguage();
+
+  const faqs = [
+    { q: t("faq.q1"), a: t("faq.a1") },
+    { q: t("faq.q2"), a: t("faq.a2") },
+    { q: t("faq.q3"), a: t("faq.a3") },
+  ];
+
   return (
     <section id="faq" className="py-24 bg-secondary/30">
       <div className="container mx-auto px-4">
         <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <h2 className="font-heading text-4xl md:text-5xl font-bold uppercase mb-4">
-            <span className="text-foreground">Frequently Asked </span>
-            <span className="text-gradient-copper">Questions</span>
+            <span className="text-foreground">{t("faq.heading1")}</span>
+            <span className="text-gradient-copper">{t("faq.heading2")}</span>
           </h2>
         </motion.div>
 
