@@ -4,11 +4,10 @@ import heroImage from "@/assets/hero-scrap.jpg";
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background image */}
       <div className="absolute inset-0">
         <img
           src={heroImage}
-          alt="Scrap metal yard with copper pipes and aluminum materials"
+          alt="Large pile of assorted scrap metal for recycling in Phnom Penh"
           className="w-full h-full object-cover"
           loading="eager"
         />
@@ -16,36 +15,20 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
       </div>
 
-      {/* Animated particles */}
       {[...Array(6)].map((_, i) => (
         <motion.div
           key={i}
           className="absolute w-1 h-1 rounded-full bg-primary/40"
-          style={{
-            left: `${15 + i * 15}%`,
-            top: `${20 + (i % 3) * 25}%`,
-          }}
-          animate={{
-            y: [0, -30, 0],
-            opacity: [0.2, 0.6, 0.2],
-          }}
-          transition={{
-            duration: 3 + i * 0.5,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: i * 0.4,
-          }}
+          style={{ left: `${15 + i * 15}%`, top: `${20 + (i % 3) * 25}%` }}
+          animate={{ y: [0, -30, 0], opacity: [0.2, 0.6, 0.2] }}
+          transition={{ duration: 3 + i * 0.5, repeat: Infinity, ease: "easeInOut", delay: i * 0.4 }}
         />
       ))}
 
       <div className="relative z-10 container mx-auto px-4 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
+        <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
           <span className="inline-block px-4 py-2 mb-6 text-sm font-body font-semibold tracking-widest uppercase border border-primary/30 rounded-full text-primary bg-primary/5">
-            Top Scrap Buyers Near You
+            Top Scrap Buyers in Phnom Penh
           </span>
         </motion.div>
 
@@ -55,8 +38,8 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <span className="block text-foreground">We Buy</span>
-          <span className="block text-gradient-copper">All Scrap</span>
+          <span className="block text-foreground">Selling Scrap?</span>
+          <span className="block text-gradient-copper">We Buy at High Prices!</span>
         </motion.h1>
 
         <motion.p
@@ -65,10 +48,9 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          Best prices for <strong className="text-primary">Copper</strong>,{" "}
-          <strong className="text-aluminum">Aluminum</strong>,{" "}
-          <strong className="text-steel">Metal</strong> & all scrap materials.
-          Fast pickup. Instant payment.
+          Fast service, fair scales in <strong className="text-primary">Phnom Penh</strong> and surrounding areas.{" "}
+          <strong className="text-primary">Copper</strong>, <strong className="text-aluminum">Aluminum</strong>,{" "}
+          <strong className="text-steel">Iron & Steel</strong>, E-Waste & more.
         </motion.p>
 
         <motion.div
@@ -78,10 +60,10 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
         >
           <a
-            href="tel:+1234567890"
+            href="tel:+85569460064"
             className="inline-flex items-center justify-center gap-2 px-8 py-4 text-lg font-heading font-bold uppercase tracking-wider bg-gradient-copper text-primary-foreground rounded-lg shadow-copper animate-pulse-glow transition-transform hover:scale-105"
           >
-            📞 Call Now
+            📞 Call Now: 069 460 064
           </a>
           <a
             href="#materials"
@@ -91,7 +73,6 @@ const HeroSection = () => {
           </a>
         </motion.div>
 
-        {/* Scroll indicator */}
         <motion.div
           className="absolute bottom-8 left-1/2 -translate-x-1/2"
           animate={{ y: [0, 8, 0] }}
