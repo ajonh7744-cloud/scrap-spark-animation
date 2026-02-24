@@ -10,11 +10,11 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 flex items-center justify-between h-16">
         <a href="/" className="font-heading text-2xl font-bold uppercase">
-          <span className="text-foreground">Scrap</span>
-          <span className="text-gradient-copper">Kings</span>
+          <span className="text-foreground">Buy</span>
+          <span className="text-gradient-copper">Scrap</span>
         </a>
         <div className="hidden md:flex items-center gap-8">
-          {["Materials", "Contact"].map((link) => (
+          {["Materials", "Reviews", "FAQ", "About", "Contact"].map((link) => (
             <a
               key={link}
               href={`#${link.toLowerCase()}`}
@@ -24,15 +24,15 @@ const Navbar = () => {
             </a>
           ))}
           <a
-            href="tel:+1234567890"
+            href="tel:+85569460064"
             className="px-5 py-2 font-heading text-sm font-bold uppercase tracking-wider bg-gradient-copper text-primary-foreground rounded-lg transition-transform hover:scale-105"
           >
-            Call Now
+            📞 Call Now
           </a>
         </div>
         {/* Mobile CTA */}
         <a
-          href="tel:+1234567890"
+          href="tel:+85569460064"
           className="md:hidden px-4 py-2 font-heading text-sm font-bold uppercase bg-gradient-copper text-primary-foreground rounded-lg"
         >
           📞 Call
