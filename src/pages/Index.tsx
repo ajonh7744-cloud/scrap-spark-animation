@@ -8,6 +8,7 @@ import AboutSection from "@/components/AboutSection";
 import MapSection from "@/components/MapSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import FloatingCallButton from "@/components/FloatingCallButton";
 
 const Index = () => {
   return (
@@ -24,6 +25,7 @@ const Index = () => {
         <AboutSection />
       </main>
       <Footer />
+      <FloatingCallButton />
     </>
   );
 };
