@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, ReactNode } from "react";
+import { createContext, useContext, useState, useEffect, ReactNode } from "react";
 
 type Lang = "en" | "km";
 
@@ -32,6 +32,23 @@ const translations: Record<Lang, Record<string, string>> = {
     "hero.ewaste": "E-Waste & more.",
     "hero.callNow": "Call Now: 069 460 064",
     "hero.viewMaterials": "View Materials",
+
+    // Slideshow
+    "slide.heading1": "What We ",
+    "slide.heading2": "Buy",
+    "slide.sub": "Browse the types of scrap materials we purchase every day",
+    "slide.copper": "Copper",
+    "slide.copperDesc": "Electric wires, pipes, red copper — we pay premium prices for all copper scrap",
+    "slide.aluminum": "Aluminum",
+    "slide.aluminumDesc": "Cans, window frames, engine parts — lightweight metal we buy in bulk",
+    "slide.metal": "Metal & Steel",
+    "slide.metalDesc": "Rebar, beams, sheets, old machinery — all ferrous metals accepted",
+    "slide.plastic": "Plastic",
+    "slide.plasticDesc": "Industrial plastic, bottles, containers — sorted or unsorted",
+    "slide.cans": "Beverage Cans",
+    "slide.cansDesc": "Aluminum and tin cans from beverages — collected in any quantity",
+    "slide.ewaste": "E-Waste",
+    "slide.ewasteDesc": "Old computers, phones, circuit boards — responsible recycling guaranteed",
 
     // Materials
     "mat.heading1": "Scrap We Buy in ",
@@ -138,6 +155,23 @@ const translations: Record<Lang, Record<string, string>> = {
     "hero.callNow": "ទូរស័ព្ទមក: 069 460 064",
     "hero.viewMaterials": "មើលសម្ភារៈ",
 
+    // Slideshow
+    "slide.heading1": "អ្វីដែលយើង",
+    "slide.heading2": "ទិញ",
+    "slide.sub": "រុករកប្រភេទសម្ភារៈសំណល់ដែលយើងទិញរាល់ថ្ងៃ",
+    "slide.copper": "ទង់ដែង",
+    "slide.copperDesc": "ខ្សែភ្លើង បំពង់ ទង់ដែងក្រហម — យើងបង់តម្លៃខ្ពស់សម្រាប់សំណល់ទង់ដែងទាំងអស់",
+    "slide.aluminum": "អាលុយមីញ៉ូម",
+    "slide.aluminumDesc": "កំប៉ុង ស៊ុមបង្អួច គ្រឿងម៉ាស៊ីន — ដែកស្រាលដែលយើងទិញជាច្រើន",
+    "slide.metal": "ដែក និងថែប",
+    "slide.metalDesc": "ដែកគោល ធ្នឹម សន្លឹក គ្រឿងម៉ាស៊ីនចាស់ — ដែកគ្រប់ប្រភេទ",
+    "slide.plastic": "ផ្លាស្ទិក",
+    "slide.plasticDesc": "ផ្លាស្ទិកឧស្សាហកម្ម ដបទឹក ធុង — តម្រៀបឬមិនតម្រៀប",
+    "slide.cans": "កំប៉ុងភេសជ្ជៈ",
+    "slide.cansDesc": "កំប៉ុងអាលុយមីញ៉ូម និងដែកស — ប្រមូលក្នុងបរិមាណណាមួយ",
+    "slide.ewaste": "សំណល់អេឡិចត្រូនិក",
+    "slide.ewasteDesc": "កុំព្យូទ័រចាស់ ទូរស័ព្ទ បន្ទះសៀគ្វី — ធានាកែច្នៃឡើងវិញដោយទទួលខុសត្រូវ",
+
     // Materials
     "mat.heading1": "សំណល់ដែលយើងទិញនៅ",
     "mat.heading2": "ភ្នំពេញ",
@@ -226,6 +260,14 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const [lang, setLang] = useState<Lang>("en");
   const t = (key: string) => translations[lang][key] || key;
+
+  useEffect(() => {
+    if (lang === "km") {
+      document.body.classList.add("lang-km");
+    } else {
+      document.body.classList.remove("lang-km");
+    }
+  }, [lang]);
 
   return (
     <LanguageContext.Provider value={{ lang, setLang, t }}>

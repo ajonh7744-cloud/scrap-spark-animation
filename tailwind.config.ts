@@ -16,6 +16,8 @@ export default {
       fontFamily: {
         heading: ["Oswald", "sans-serif"],
         body: ["Inter", "sans-serif"],
+        "heading-km": ["Kdam Thmor Pro", "sans-serif"],
+        "body-km": ["Noto Sans Khmer", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
