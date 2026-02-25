@@ -58,25 +58,23 @@
 }
 
 @layer base {
+  :root {
+    --font-heading: "Oswald", sans-serif;
+    --font-body: "Inter", sans-serif;
+  }
+  body.lang-km {
+    --font-heading: "Kdam Thmor Pro", sans-serif;
+    --font-body: "Noto Sans Khmer", sans-serif;
+  }
   * {
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground font-body antialiased;
-  }
-  body.lang-km {
-    @apply font-body-km;
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-body);
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-heading;
-  }
-  body.lang-km h1,
-  body.lang-km h2,
-  body.lang-km h3,
-  body.lang-km h4,
-  body.lang-km h5,
-  body.lang-km h6 {
-    @apply font-heading-km;
+    font-family: var(--font-heading);
   }
 }
 
