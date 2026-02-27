@@ -7,6 +7,7 @@ const CTASection = () => {
 
   const contacts = [
     { icon: Phone, label: t("cta.phone"), value: t("cta.phoneVal"), href: "tel:+85569460064", color: "text-primary" },
+    { icon: MessageCircle, label: "WhatsApp", value: "+855 69 460 064", href: "https://wa.me/85569460064", color: "text-green-500" },
     { icon: MessageCircle, label: t("cta.telegram"), value: t("cta.telegramVal"), href: "https://t.me/+85569460064", color: "text-blue-400" },
     { icon: Facebook, label: t("cta.facebook"), value: t("cta.facebookVal"), href: "https://www.facebook.com/profile.php?id=489012197639262", color: "text-blue-500" },
     { icon: MapPin, label: t("cta.location"), value: t("cta.locationVal"), href: "https://maps.google.com/?q=Phnom+Penh+Cambodia", color: "text-red-400" },
@@ -61,6 +62,16 @@ const CTASection = () => {
               📞 {t("hero.callNow")}
             </motion.a>
             <motion.a
+              href="https://wa.me/85569460064"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-3 px-10 py-5 text-xl font-heading font-bold uppercase tracking-wider bg-green-600 text-white rounded-xl shadow-lg transition-all hover:bg-green-700"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              💬 WhatsApp
+            </motion.a>
+            <motion.a
               href="https://t.me/+85569460064"
               target="_blank"
               rel="noopener noreferrer"
@@ -68,7 +79,7 @@ const CTASection = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
             >
-              💬 Telegram
+              ✈️ Telegram
             </motion.a>
           </div>
         </motion.div>
