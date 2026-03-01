@@ -50,6 +50,24 @@ const translations: Record<Lang, Record<string, string>> = {
     "slide.ewaste": "E-Waste",
     "slide.ewasteDesc": "Old computers, phones, circuit boards — responsible recycling guaranteed",
 
+    // Copper Highlight
+    "copper.tag": "Most Wanted Material",
+    "copper.badge": "Premium Prices Paid",
+    "copper.heading1": "We Pay Top Dollar for",
+    "copper.heading2": "Copper Scrap",
+    "copper.desc": "Copper is one of the most valuable scrap metals. Whether you have electric wires, plumbing pipes, red copper, or industrial copper parts — we offer the highest prices in Phnom Penh with instant cash payment.",
+    "copper.type1": "Electric Wires & Cables",
+    "copper.type2": "Plumbing Pipes & Fittings",
+    "copper.type3": "Red Copper & Bright Copper",
+    "copper.type4": "Industrial Copper Parts & Motors",
+    "copper.stat1": "Price",
+    "copper.stat1Val": "Top $$",
+    "copper.stat2": "Scales",
+    "copper.stat2Val": "100%",
+    "copper.stat3": "Pickup",
+    "copper.stat3Val": "Free",
+    "copper.callNow": "Sell Copper Now",
+
     // Materials
     "mat.heading1": "Scrap We Buy in ",
     "mat.heading2": "Phnom Penh",
@@ -175,6 +193,24 @@ const translations: Record<Lang, Record<string, string>> = {
     "slide.cansDesc": "កំប៉ុងអាលុយមីញ៉ូម និងដែកស — ប្រមូលក្នុងបរិមាណណាមួយ",
     "slide.ewaste": "សំណល់អេឡិចត្រូនិក",
     "slide.ewasteDesc": "កុំព្យូទ័រចាស់ ទូរស័ព្ទ បន្ទះសៀគ្វី — ធានាកែច្នៃឡើងវិញដោយទទួលខុសត្រូវ",
+
+    // Copper Highlight
+    "copper.tag": "សម្ភារៈដែលត្រូវការបំផុត",
+    "copper.badge": "តម្លៃខ្ពស់បំផុត",
+    "copper.heading1": "យើងបង់តម្លៃខ្ពស់សម្រាប់",
+    "copper.heading2": "សំណល់ទង់ដែង",
+    "copper.desc": "ទង់ដែងគឺជាសំណល់ដែកដែលមានតម្លៃខ្ពស់បំផុតមួយ។ មិនថាអ្នកមានខ្សែភ្លើង បំពង់ទឹក ទង់ដែងក្រហម ឬគ្រឿងបន្លាស់ឧស្សាហកម្ម — យើងផ្តល់តម្លៃខ្ពស់បំផុតនៅភ្នំពេញ ជាមួយការបង់ប្រាក់សុទ្ធភ្លាមៗ។",
+    "copper.type1": "ខ្សែភ្លើង និងខ្សែកាប",
+    "copper.type2": "បំពង់ទឹក និងគ្រឿងភ្ជាប់",
+    "copper.type3": "ទង់ដែងក្រហម និងទង់ដែងភ្លឺ",
+    "copper.type4": "គ្រឿងបន្លាស់ទង់ដែង និងម៉ូទ័រ",
+    "copper.stat1": "តម្លៃ",
+    "copper.stat1Val": "ខ្ពស់បំផុត",
+    "copper.stat2": "ជញ្ជីង",
+    "copper.stat2Val": "១០០%",
+    "copper.stat3": "យកសំណល់",
+    "copper.stat3Val": "ឥតគិតថ្លៃ",
+    "copper.callNow": "លក់ទង់ដែងឥឡូវ",
 
     // Materials
     "mat.heading1": "សំណល់ដែលយើងទិញនៅ",
