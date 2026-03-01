@@ -25,6 +25,7 @@ const MaterialsSection = () => {
     { name: t("mat.phones"), description: t("mat.phonesDesc"), icon: "📱", color: "border-foreground/20 hover:border-foreground/50", glow: "hover:shadow-[0_0_30px_-10px_hsl(40_10%_90%/0.2)]" },
     { name: t("mat.machinery"), description: t("mat.machineryDesc"), icon: "⚙️", color: "border-steel/30 hover:border-steel", glow: "hover:shadow-[0_0_30px_-10px_hsl(220_8%_40%/0.4)]" },
     { name: t("mat.vehicles"), description: t("mat.vehiclesDesc"), icon: "🚗", color: "border-primary/30 hover:border-primary", glow: "hover:shadow-copper" },
+    { name: t("mat.cans"), description: t("mat.cansDesc"), icon: "🥫", color: "border-aluminum/30 hover:border-aluminum", glow: "hover:shadow-[0_0_30px_-10px_hsl(210_15%_75%/0.4)]" },
     { name: t("mat.more"), description: t("mat.moreDesc"), icon: "♻️", color: "border-primary/30 hover:border-primary", glow: "hover:shadow-copper" },
   ];
 
